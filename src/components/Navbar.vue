@@ -17,8 +17,8 @@
 .navbar {
   position: fixed;
   top: 0;
-
-  width: 100%;
+  left: 0;
+  right: 0;
 
   height: 60px;
 
@@ -28,27 +28,46 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 40px;
+  padding: 0 5%;
+  max-width: 1400px;
+  margin: 0 auto;
 
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  
+
   z-index: 1000;
 }
 
 .logo {
-  font-size: 22px;
+  font-size: clamp(18px, 4vw, 22px);
   font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
-
+  gap: clamp(15px, 3vw, 30px);
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
+  font-size: clamp(14px, 2.5vw, 16px);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 3%;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
 }
 </style>
