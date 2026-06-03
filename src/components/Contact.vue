@@ -1,5 +1,5 @@
 <template>
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2>联系我</h2>
 
     <p>欢迎交流学习与项目开发经验。</p>

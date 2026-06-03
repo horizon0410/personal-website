@@ -1,5 +1,5 @@
 <template>
-  <section class="skills">
+  <section id="skills" class="skills">
     <h2>技能栈</h2>
 
     <div class="skill-list">
