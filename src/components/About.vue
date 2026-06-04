@@ -77,12 +77,22 @@ const stats = [
 .about {
   padding: 90px 10%;
   background: white;
+  transition: background 0.3s ease;
+}
+
+:global(.dark) .about {
+  background: #1a1a2e;
 }
 
 .section-title {
   font-size: clamp(26px, 3vw, 36px);
   margin: 0 0 40px;
   color: #1a1a2e;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .section-title {
+  color: #fff;
 }
 
 /* ── 个人简介卡片 ── */
@@ -93,7 +103,13 @@ const stats = [
   margin-bottom: 60px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   border: 1px solid rgba(66,184,131,0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+:global(.dark) .intro-card {
+  background: linear-gradient(135deg, #252541 0%, #2a2a42 100%);
+  border-color: rgba(100,216,168,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 .intro-card:hover {
@@ -101,11 +117,20 @@ const stats = [
   box-shadow: 0 12px 36px rgba(66,184,131,0.12);
 }
 
+:global(.dark) .intro-card:hover {
+  box-shadow: 0 12px 36px rgba(100,216,168,0.15);
+}
+
 .intro-card p {
   line-height: 1.9;
   color: #444;
   margin: 0 0 14px;
   font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .intro-card p {
+  color: #ccc;
 }
 
 .intro-card p:last-child {
@@ -115,6 +140,11 @@ const stats = [
 .intro-card strong {
   color: #42b883;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .intro-card strong {
+  color: #64d8a8;
 }
 
 /* ── 时间轴 ── */
@@ -127,6 +157,11 @@ const stats = [
   margin: 0 0 32px;
   color: #333;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .subsection-title {
+  color: #e0e0e0;
 }
 
 .timeline {
@@ -171,7 +206,12 @@ const stats = [
   background: white;
   border: 3px solid #42b883;
   box-shadow: 0 0 0 4px rgba(66,184,131,0.15);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+}
+
+:global(.dark) .dot {
+  background: #1a1a2e;
+  border-color: #64d8a8;
 }
 
 .timeline-item:hover .dot {
@@ -185,12 +225,21 @@ const stats = [
   border-radius: 12px;
   padding: 20px 24px;
   border-left: 3px solid #42b883;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+:global(.dark) .timeline-content {
+  background: #252541;
+  border-color: #64d8a8;
 }
 
 .timeline-item:hover .timeline-content {
   transform: translateX(6px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+:global(.dark) .timeline-item:hover .timeline-content {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .year {
@@ -202,6 +251,12 @@ const stats = [
   padding: 3px 12px;
   border-radius: 999px;
   margin-bottom: 8px;
+  transition: background 0.3s ease;
+}
+
+:global(.dark) .year {
+  background: #64d8a8;
+  color: #1a1a2e;
 }
 
 .timeline-content h4 {
@@ -209,6 +264,11 @@ const stats = [
   color: #222;
   margin: 8px 0 6px;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .timeline-content h4 {
+  color: #e0e0e0;
 }
 
 .timeline-content p {
@@ -216,6 +276,11 @@ const stats = [
   line-height: 1.7;
   color: #555;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .timeline-content p {
+  color: #aaa;
 }
 
 /* ── 统计卡片 ── */

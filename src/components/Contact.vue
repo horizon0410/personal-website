@@ -15,11 +15,31 @@
 .contact {
   padding: 80px;
   background: #f5f7fa;
+  transition: background 0.3s ease;
+}
+
+:global(.dark) .contact {
+  background: #1a1a2e;
 }
 
 .contact h2 {
   font-size: 36px;
   margin-bottom: 20px;
+  color: #1a1a2e;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .contact h2 {
+  color: #fff;
+}
+
+.contact > p {
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .contact > p {
+  color: #bbb;
 }
 
 .contact-info {
@@ -29,5 +49,11 @@
 .contact-info p {
   margin-bottom: 12px;
   font-size: 18px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .contact-info p {
+  color: #ccc;
 }
 </style>

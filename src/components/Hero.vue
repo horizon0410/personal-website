@@ -117,6 +117,11 @@ onUnmounted(() => {
   padding: 60px 10% 0;
   background: linear-gradient(135deg, #f5f7fa 0%, #e8f4ff 100%);
   overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+:global(.dark) .hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
 .particles {
@@ -144,18 +149,34 @@ onUnmounted(() => {
 .hero-text h1 {
   font-size: clamp(28px, 4vw, 48px);
   margin: 0 0 20px 0;
+  color: #1a1a2e;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .hero-text h1 {
+  color: #fff;
 }
 
 .hero-text h2 {
   font-size: clamp(18px, 2.5vw, 28px);
   color: #42b883;
   margin: 0 0 20px 0;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .hero-text h2 {
+  color: #64d8a8;
 }
 
 .hero-text p {
   line-height: 1.8;
   color: #555;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .hero-text p {
+  color: #bbb;
 }
 
 .buttons {
@@ -191,9 +212,21 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s, color 0.3s, border-color 0.3s;
 }
 .btn-outline:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+:global(.dark) .btn-outline {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ddd;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+:global(.dark) .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
 
 .wechat-wrap {
   position: relative;
@@ -214,6 +247,12 @@ onUnmounted(() => {
   gap: 8px;
   white-space: nowrap;
   z-index: 100;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+:global(.dark) .qr-popup {
+  background: #2a2a3e;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
 
 .qr-popup img {
@@ -226,6 +265,11 @@ onUnmounted(() => {
 .qr-popup span {
   font-size: 12px;
   color: #888;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .qr-popup span {
+  color: #aaa;
 }
 
 .qr-pop-enter-active, .qr-pop-leave-active { transition: opacity 0.2s, transform 0.2s; }

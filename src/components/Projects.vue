@@ -90,11 +90,22 @@ const close = () => { active.value = null }
 .projects {
   padding: 80px;
   background: #f9fafb;
+  transition: background 0.3s ease;
+}
+
+:global(.dark) .projects {
+  background: #16213e;
 }
 
 .projects h2 {
   font-size: 36px;
   margin-bottom: 40px;
+  color: #1a1a2e;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .projects h2 {
+  color: #fff;
 }
 
 .project-list {
@@ -112,7 +123,12 @@ const close = () => { active.value = null }
   display: flex;
   flex-direction: column;
   gap: 14px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+}
+
+:global(.dark) .project-card {
+  background: #252541;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .project-card:hover {
@@ -120,10 +136,19 @@ const close = () => { active.value = null }
   box-shadow: 0 12px 28px rgba(66, 184, 131, 0.18);
 }
 
+:global(.dark) .project-card:hover {
+  box-shadow: 0 12px 28px rgba(100, 216, 168, 0.25);
+}
+
 .project-card h3 {
   margin: 0;
   font-size: 18px;
   color: #222;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .project-card h3 {
+  color: #e0e0e0;
 }
 
 .project-card p {
@@ -132,6 +157,11 @@ const close = () => { active.value = null }
   color: #555;
   font-size: 14px;
   flex: 1;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .project-card p {
+  color: #aaa;
 }
 
 .tags {
@@ -147,6 +177,12 @@ const close = () => { active.value = null }
   padding: 3px 10px;
   border-radius: 20px;
   font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+:global(.dark) .tag {
+  background: rgba(100,216,168,0.15);
+  color: #64d8a8;
 }
 
 .detail-btn {
@@ -166,6 +202,15 @@ const close = () => { active.value = null }
   transform: translateY(-2px);
 }
 
+:global(.dark) .detail-btn {
+  background: #64d8a8;
+  color: #1a1a2e;
+}
+
+:global(.dark) .detail-btn:hover {
+  background: #52c896;
+}
+
 /* 弹窗 */
 .modal-mask {
   position: fixed;
@@ -175,6 +220,11 @@ const close = () => { active.value = null }
   align-items: center;
   justify-content: center;
   z-index: 2000;
+  transition: background 0.3s ease;
+}
+
+:global(.dark) .modal-mask {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .modal {
@@ -185,12 +235,23 @@ const close = () => { active.value = null }
   max-width: 520px;
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+:global(.dark) .modal {
+  background: #252541;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
 .modal h3 {
   font-size: 22px;
   margin: 0 0 12px;
   color: #222;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .modal h3 {
+  color: #e0e0e0;
 }
 
 .modal-summary {
@@ -198,12 +259,22 @@ const close = () => { active.value = null }
   line-height: 1.8;
   margin: 0 0 16px;
   font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .modal-summary {
+  color: #aaa;
 }
 
 .modal h4 {
   margin: 20px 0 10px;
   font-size: 15px;
   color: #333;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .modal h4 {
+  color: #ccc;
 }
 
 .modal ul {
@@ -218,6 +289,11 @@ const close = () => { active.value = null }
   color: #555;
   line-height: 1.7;
   font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .modal ul li {
+  color: #aaa;
 }
 
 .github-link {
@@ -227,6 +303,11 @@ const close = () => { active.value = null }
   font-weight: 600;
   text-decoration: none;
   font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .github-link {
+  color: #64d8a8;
 }
 
 .github-link:hover {
@@ -248,6 +329,14 @@ const close = () => { active.value = null }
 
 .close-btn:hover {
   color: #333;
+}
+
+:global(.dark) .close-btn {
+  color: #888;
+}
+
+:global(.dark) .close-btn:hover {
+  color: #ddd;
 }
 
 /* 过渡动画 */

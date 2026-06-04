@@ -110,6 +110,11 @@ onMounted(fillBars)
   padding: 90px 10%;
   background: linear-gradient(160deg, #f0f4f8 0%, #e8f4ff 100%);
   min-height: 60vh;
+  transition: background 0.3s ease;
+}
+
+:global(.dark) .skills {
+  background: linear-gradient(160deg, #16213e 0%, #1a1a2e 100%);
 }
 
 .section-title {
@@ -117,6 +122,11 @@ onMounted(fillBars)
   margin: 0 0 40px;
   color: #1a1a2e;
   letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .section-title {
+  color: #fff;
 }
 
 /* ── Tabs ── */
@@ -141,6 +151,12 @@ onMounted(fillBars)
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
+:global(.dark) .tab-btn {
+  background: rgba(255,255,255,0.08);
+  color: #bbb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
 .tab-btn:hover {
   border-color: #42b883;
   color: #42b883;
@@ -148,11 +164,23 @@ onMounted(fillBars)
   box-shadow: 0 6px 16px rgba(66,184,131,0.18);
 }
 
+:global(.dark) .tab-btn:hover {
+  border-color: #64d8a8;
+  color: #64d8a8;
+  box-shadow: 0 6px 16px rgba(100,216,168,0.25);
+}
+
 .tab-btn.active {
   background: #42b883;
   color: white;
   border-color: #42b883;
   box-shadow: 0 6px 20px rgba(66,184,131,0.35);
+}
+
+:global(.dark) .tab-btn.active {
+  background: #64d8a8;
+  color: #1a1a2e;
+  border-color: #64d8a8;
 }
 
 /* ── Skill list ── */
@@ -171,13 +199,23 @@ onMounted(fillBars)
   border-radius: 16px;
   padding: 22px 26px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.07);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease, border-color 0.3s ease;
   animation: card-in 0.35s ease both;
+}
+
+:global(.dark) .skill-card {
+  background: rgba(37,37,65,0.6);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
 }
 
 .skill-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(66,184,131,0.18);
+}
+
+:global(.dark) .skill-card:hover {
+  box-shadow: 0 12px 32px rgba(100,216,168,0.25);
 }
 
 @keyframes card-in {
@@ -197,12 +235,22 @@ onMounted(fillBars)
   font-size: 15px;
   font-weight: 600;
   color: #222;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .skill-name {
+  color: #e0e0e0;
 }
 
 .skill-pct {
   font-size: 13px;
   color: #42b883;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .skill-pct {
+  color: #64d8a8;
 }
 
 .bar-track {
@@ -210,6 +258,11 @@ onMounted(fillBars)
   border-radius: 999px;
   background: rgba(0,0,0,0.08);
   overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+:global(.dark) .bar-track {
+  background: rgba(255,255,255,0.1);
 }
 
 .bar-fill {
